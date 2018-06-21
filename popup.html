@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Getting Started Extension's Popup</title>
+        <style type="text/css">
+            body {
+                font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+                font-size: 100%;
+            }
+            #submitButton {
+                display:inline-block;
+                margin-right: 10px;
+            }
+            #resultText {
+                display: inline-block;
+                color: #FFFFFF;
+                -o-transition: color 0.60s linear;
+                -moz-transition: color 0.60s linear;
+                -khtml-transition: color 0.60s linear;
+                -webkit-transition: color 0.60s linear;
+                -ms-transition: color 0.60s linear;
+                transition: color 0.60s linear;
+            }
+        </style>
+
+        <script src="popup.js"></script>
+    </head>
+
+    <body>
+        <h4>gourment</h4>
+        <form id="alarmForm" action="">
+            Time: <input type="time" name="time"><br>
+            Location: <input type="text" name="location"><br>
+            Genre: <input type="text" name="genre"><br>
+            <input id="submitButton" type="submit" value="set Alarm">
+            <h3 id="resultText"></h3>
+         </form>
+    </body>
+</html>
