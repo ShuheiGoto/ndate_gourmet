@@ -11,7 +11,8 @@
   "permissions": [
     "alarms",
     "tabs",
-    "background"
+    "background",
+    "webNavigation"
   ],
   "background": {
     "scripts": ["background.js"]
