@@ -1,0 +1,19 @@
+{
+  "manifesr_version": 2,
+  "name": "ndate_gourment",
+  "description": "ndate_gourment",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+
+  },
+  "permissions": [
+    "alarms",
+    "tabs",
+    "background"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
