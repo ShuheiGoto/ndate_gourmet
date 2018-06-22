@@ -19,6 +19,7 @@ $(function () {
               var address = result.rest[i].address
               var tel = result.rest[i].tel
               var url = result.rest[i].url
+              var open_time = result.rest[i].opentime
               var image_url = result.rest[i].image_url.shop_image1
               var access_station = result.rest[i].access.station
               var access_walk = result.rest[i].access.walk
@@ -30,6 +31,9 @@ $(function () {
                   $('div#card-'+i).append('<div><img src='+image_url+'></div>');
               }
               $('div#card-'+i).append('<p>'+ '住所：' +address+ '</p>');
+              if (0 !== Object.keys(open_time).length) {
+                  $('div#card-'+i).append('<p>'+ '営業時間：' +open_time+ '</p>');
+              }
               $('div#card-'+i).append('<p>' +access_station+'から'+access_walk+'分'+'</p>');
               $('div#card-'+i).append('<p>'+ 'TEL：' +tel+ '</p>');
               if (0 !== Object.keys(pr_text).length) {
