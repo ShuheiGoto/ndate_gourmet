@@ -21,10 +21,23 @@ $(function () {
           shuffleArray(result.rest);
           for (var i in result.rest.slice(0,3) ){
               var name = result.rest[i].name
+              var tel = result.rest[i].tel
               var url = result.rest[i].url
+              var image_url = result.rest[i].image_url.shop_image1
+              var access_station = result.rest[i].access.station
+              var access_walk = result.rest[i].access.walk
+              var pr_text = result.rest[i].pr.pr_short
               // TODO: 欲しいデータをこの辺に入れてく
               $('div#shops').append("<div class='card 4 col' id=card-" +i+ "></div>")
-              $('div#card-'+i).append('<a rel='+url+'>' +name+ '</p>');
+              $('div#card-'+i).append('<a href='+url+'><h4>' +name+ '</h4></a>');
+              $('div#card-'+i).append('<p>' +tel+ '</p>');
+              if (0 !== Object.keys(image_url).length) {
+                  $('div#card-'+i).append('<div><img src='+image_url+'></div>');
+              }
+              $('div#card-'+i).append('<p>' +access_station+'から'+access_walk+'分'+'</p>');
+              if (0 !== Object.keys(pr_text).length) {
+                  $('div#card-'+i).append('<p>' +pr_text+ '</p>');
+              }
           }
       }
   }
