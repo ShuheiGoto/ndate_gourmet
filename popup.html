@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="utf-8"/>
         <title>Getting Started Extension's Popup</title>
         <style type="text/css">
             body {
@@ -23,16 +24,27 @@
         </style>
 
         <script src="popup.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css" />
     </head>
 
-    <body>
-        <h4>gourment</h4>
-        <form id="alarmForm" action="">
-            Time: <input type="time" name="time"><br>
-            Location: <input type="text" name="location"><br>
-            Genre: <input type="text" name="genre"><br>
-            <input id="submitButton" type="submit" value="set Alarm">
-            <h3 id="resultText"></h3>
-         </form>
+    <body style="width: 400px">
+        <div class="card">
+        <h4>n立のグルメ</h4>
+        <p>指定した時間にお店を紹介します</p>
+            <form id="alarmForm" action="">
+                時間指定: <input class="card w-100" type="time" name="time"><br>
+                場所(時間あれば作るぞ): <input class="card w-100" type="text" name="location"><br>
+                ジャンル:
+                <select class="card w-100" name="genre">
+                    <option value="japanese">和食</option>
+                    <option value="chinese">中華</option>
+                    <option value="western">洋食</option>
+                    <option value="ramen">ラーメン</option>
+                    <option value="curry">カレー</option>
+                </select>
+                <input class="btn primary" id="submitButton" type="submit" value="設定する">
+            </form>
+            <h4 id="resultText"></h4>
+        </div>
     </body>
 </html>

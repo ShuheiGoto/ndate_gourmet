@@ -8,10 +8,10 @@ function sendFromToBackground(submittedForm){
     chrome.runtime.sendMessage(msg, function(response){
         if (response.error == undefined) {
             document.getElementById("resultText").style.color='#00EE18';
-            document.getElementById("resultText").innerHTML='Alarm Set';
+            document.getElementById("resultText").innerHTML='アラーム設定中';
         } else {
             document.getElementById("resultText").style.color='#E02000';
-            document.getElementById("resultText").innerHTML='Alarm Not Set: ' + response.error;
+            document.getElementById("resultText").innerHTML='設定エラー' + response.error;
         }
     });
 }
