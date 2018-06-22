@@ -3,7 +3,7 @@ $(function () {
 
   var url = 'https://api.gnavi.co.jp/RestSearchAPI/20150630/';
   var params = {
-      keyid: '141a9e86a558f929a1cd59416c8a7430',
+      keyid: '',
       format: 'json',
       latitude: 35.6455121, // 今は田町駅になってる
       longitude: 139.7456368,
