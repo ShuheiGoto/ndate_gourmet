@@ -3,11 +3,12 @@ $(function () {
 
   var url = 'https://api.gnavi.co.jp/RestSearchAPI/20150630/';
   var params = {
-      keyid: '',
+      keyid: '141a9e86a558f929a1cd59416c8a7430',
       format: 'json',
       latitude: 35.6455121, // 今は田町駅になってる
       longitude: 139.7456368,
       range: 1, //300m圏内
+      lunch: 1, // ランチ営業
       hit_per_page: 100 // 1回のリクエストで取ってこれる最大件数
     };
 
