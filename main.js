@@ -1,6 +1,4 @@
 $(function () {
-  $('div#main.content').append("<input type='text' class='js--key'>");
-  $('div#main.content').append("<input type='button' value='apply' class='js--apply'>");
   $('div#main.content').append("<div class='row' id='shops'></div>");
 
   var url = 'https://api.gnavi.co.jp/RestSearchAPI/20150630/';
@@ -51,11 +49,7 @@ $(function () {
         }
       return array;
   }
-
-  $(document).on('click', '.js--apply', function(){
-      params.keyid = $('.js--key').val();
-      $.get(url, params, function(result){
-          showResult(result);
-      }, "json");
-  });
+    $.get(url, params, function (result) {
+        showResult(result);
+    }, "json");
 });
