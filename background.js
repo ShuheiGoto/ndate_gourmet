@@ -1,4 +1,5 @@
 /** @var {boolean} Is the content script always executed. */
+/*
 let isExecuted = false;
 
 chrome.webNavigation.onHistoryStateUpdated.addListener(() => {
@@ -8,6 +9,7 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(() => {
 
   isExecuted = true;
 });
+*/
 
 console.log("background page");
 
@@ -19,9 +21,10 @@ var desireGenre = "";
 chrome.alarms.onAlarm.addListener(function(alarm){
     console.log("Alarm fired!");
     console.log(alarm);
-
     tabProperties = { url: "https://www.google.com/" };
-    chrome.tabs.create(tabProperties);
+    chrome.tabs.create(tabProperties, function(tab){
+        chrome.tabs.executeScript(tab.id, { file: "main.js"} );
+    });
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
